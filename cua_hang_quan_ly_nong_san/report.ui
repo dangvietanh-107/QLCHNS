@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Báo Cáo</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">
+background-color: #f0f8ea; /* Light green, base color */
+font: 12pt "Segoe UI";
+color: #333333; /* Dark text for better readability */
+</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="dateRangeLayout">
+      <item>
+       <widget class="QLabel" name="lblTuNgay">
+        <property name="text">
+         <string>Từ ngày:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QDateEdit" name="dateEditTuNgay">
+        <property name="styleSheet">
+         <string notr="true">
+background-color: #ffffff;
+border: 1px solid #a3b994;
+padding: 5px;
+color: #000000; /* Black text in date edit */
+</string>
+        </property>
+        <property name="displayFormat">
+         <string>d/M/yy</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="lblDenNgay">
+        <property name="text">
+         <string>Đến ngày:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QDateEdit" name="dateEditDenNgay">
+        <property name="styleSheet">
+         <string notr="true">
+background-color: #ffffff;
+border: 1px solid #a3b994;
+padding: 5px;
+color: #000000; /* Black text in date edit */
+</string>
+        </property>
+        <property name="displayFormat">
+         <string>d/M/yy</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnTaoBaoCao">
+        <property name="styleSheet">
+         <string notr="true">
+background-color: #a3b994;
+color: black;
+border: none;
+padding: 5px 10px;
+</string>
+        </property>
+        <property name="text">
+         <string>Tạo báo cáo</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="styleSheet">
+       <string notr="true">
+background-color: #ffffff;
+color: #000000;
+</string>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tabDoanhThu">
+       <attribute name="title">
+        <string>Doanh Thu</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>Tổng doanh thu: 0 VNĐ</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="tableDoanhThu"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnExportDoanhThu">
+          <property name="styleSheet">
+           <string notr="true">
+background-color: #a3b994;
+color: black;
+border: none;
+padding: 5px 10px;
+</string>
+          </property>
+          <property name="text">
+           <string>Xuất Excel Doanh Thu</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabSanPham">
+       <attribute name="title">
+        <string>Sản phẩm bán chạy</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QTableWidget" name="tableSanPhamBanChay"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnExportSanPham">
+          <property name="styleSheet">
+           <string notr="true">
+background-color: #a3b994;
+color: black;
+border: none;
+padding: 5px 10px;
+</string>
+          </property>
+          <property name="text">
+           <string>Xuất Excel Sản Phẩm Bán Chạy</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabKhachHangVIP">
+       <attribute name="title">
+        <string>Khách hàng VIP</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QTableWidget" name="tableKhachHangVIP"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnExportKhachHang">
+          <property name="styleSheet">
+           <string notr="true">
+background-color: #a3b994;
+color: black;
+border: none;
+padding: 5px 10px;
+</string>
+          </property>
+          <property name="text">
+           <string>Xuất Excel Khách Hàng VIP</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabKhuyenMai">
+       <attribute name="title">
+        <string>Khuyến mãi đã dùng</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QTableWidget" name="tableKhuyenMaiDaDung"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnExportKhuyenMai">
+          <property name="styleSheet">
+           <string notr="true">
+background-color: #a3b994;
+color: black;
+border: none;
+padding: 5px 10px;
+</string>
+          </property>
+          <property name="text">
+           <string>Xuất Excel Khuyến Mãi Đã Dùng</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1200</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

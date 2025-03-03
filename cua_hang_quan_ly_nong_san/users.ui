@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Quản lý Khách Hàng</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">
+background-color: #f0f8ea; /* Light green, base color */
+font: 12pt "Segoe UI";
+color: #333333; /* Dark text for better readability */
+</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTableWidget" name="tableKhachHang">
+      <property name="styleSheet">
+       <string notr="true">
+background-color: #ffffff; /* White background for the table */
+alternate-background-color: #e0e8d5; /* Slightly darker green for alternate rows */
+selection-background-color: #a3b994; /* Darker green for selection */
+color: #000000; /* Black text in table */
+</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="searchLayout">
+      <item>
+       <widget class="QLineEdit" name="txtSearch">
+        <property name="styleSheet">
+         <string notr="true">
+background-color: #ffffff;
+border: 1px solid #a3b994;
+padding: 5px;
+color: #000000; /* Black text in search box */
+</string>
+        </property>
+        <property name="placeholderText">
+         <string>Tìm kiếm...</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnSearch">
+        <property name="styleSheet">
+         <string notr="true">
+background-color: #a3b994;
+color: black;
+border: none;
+padding: 5px 10px;
+</string>
+        </property>
+        <property name="text">
+         <string>Tìm kiếm</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QGridLayout" name="formLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="lblMaKH">
+        <property name="text">
+         <string>Mã KH:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="txtMaKH">
+        <property name="styleSheet">
+         <string notr="true">
+background-color: #ffffff;
+border: 1px solid #a3b994;
+padding: 5px;
+color: #000000; /* Black text in input fields */
+</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="lblTenKH">
+        <property name="text">
+         <string>Tên KH:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="txtTenKH">
+        <property name="styleSheet">
+         <string notr="true">
+background-color: #ffffff;
+border: 1px solid #a3b994;
+padding: 5px;
+color: #000000; /* Black text in input fields */
+</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="lblEmail">
+        <property name="text">
+         <string>Email:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="txtEmail">
+        <property name="styleSheet">
+         <string notr="true">
+background-color: #ffffff;
+border: 1px solid #a3b994;
+padding: 5px;
+color: #000000; /* Black text in input fields */
+</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="buttonLayout">
+      <item>
+       <widget class="QPushButton" name="btnAdd">
+        <property name="styleSheet">
+         <string notr="true">
+background-color: #6b8e23; /* Olive Green */
+color: white;
+border: none;
+padding: 5px 10px;
+</string>
+        </property>
+        <property name="text">
+         <string>Thêm</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnEdit">
+        <property name="styleSheet">
+         <string notr="true">
+background-color: #8fbc8f; /* Dark Sea Green */
+color: black;
+border: none;
+padding: 5px 10px;
+</string>
+        </property>
+        <property name="text">
+         <string>Sửa</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnDelete">
+        <property name="styleSheet">
+         <string notr="true">
+background-color: #b8860b; /* Goldenrod */
+color: black;
+border: none;
+padding: 5px 10px;
+</string>
+        </property>
+        <property name="text">
+         <string>Xóa</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnExport">
+        <property name="styleSheet">
+         <string notr="true">
+background-color: #daa520; /* Goldenrod */
+color: white;
+border: none;
+padding: 5px 10px;
+</string>
+        </property>
+        <property name="text">
+         <string>Xuất Excel</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnClear">
+        <property name="styleSheet">
+         <string notr="true">
+background-color: #3cb371; /* Medium Sea Green */
+color: white;
+border: none;
+padding: 5px 10px;
+</string>
+        </property>
+        <property name="text">
+         <string>Làm Mới</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1200</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

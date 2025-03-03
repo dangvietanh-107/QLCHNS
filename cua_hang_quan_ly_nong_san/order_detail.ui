@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OrderDetailWindow</class>
+ <widget class="QMainWindow" name="OrderDetailWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Chi Tiết Đơn Hàng</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">
+background-color: #f0f8ea; /* Light green, base color */
+font: 12pt "Segoe UI";
+color: #333333; /* Dark text for better readability */
+</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="lblOrderDetails">
+      <property name="text">
+       <string>Lịch Sử:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="orderSearchLayout">
+      <item>
+       <widget class="QLineEdit" name="txtSearchOrder">
+        <property name="styleSheet">
+         <string notr="true">
+background-color: #ffffff;
+border: 1px solid #a3b994;
+padding: 5px;
+color: #000000;
+</string>
+        </property>
+        <property name="placeholderText">
+         <string>Tìm kiếm mã đơn hàng...</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnSearchOrder">
+        <property name="styleSheet">
+         <string notr="true">
+background-color: #a3b994;
+color: black;
+border: none;
+padding: 5px 10px;
+</string>
+        </property>
+        <property name="text">
+         <string>Tìm kiếm</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnExportExcel">
+        <property name="styleSheet">
+         <string notr="true">
+background-color: #a3b994;
+color: black;
+border: none;
+padding: 5px 10px;
+</string>
+        </property>
+        <property name="text">
+         <string>Xuất Excel</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBoxOrder">
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="title">
+       <string>Mã Đơn Hàng</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QFrame" name="frame">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QTableWidget" name="tableOrder">
+            <property name="styleSheet">
+             <string notr="true">
+background-color: #ffffff;
+alternate-background-color: #e0e8d5;
+selection-background-color: #a3b994;
+color: #000000;
+</string>
+            </property>
+            <column>
+             <property name="text">
+              <string>Mã Đơn Hàng</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Ngày Tạo</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
